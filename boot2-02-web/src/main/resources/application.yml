@@ -1,0 +1,10 @@
+spring:
+  web:
+    resources:
+  #     static-locations:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+#    static-path-pattern: /res/**
+

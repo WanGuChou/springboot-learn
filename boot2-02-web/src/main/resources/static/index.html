@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="get" action="/user"><input type="submit" value="get"/></form>
+<form method="post" action="/user"><input type="submit" value="post"/></form>
+<form method="post" action="/user">
+    <input type="submit" value="delete"/>
+    <input type="hidden" name="_method" value="delete"/>
+
+</form>
+<form method="post" action="/user">
+    <input type="submit" value="post"/>
+    <input type="hidden" name="_method" value="put"/>
+</form>
+<hr>
+
+<form method="post" action="/myUser"><input type="submit" value="myUser"/>
+    <input value="zhangshan" name="usr">
+    <input value="123456" name="pwd">
+</form>
+
+
+</body>
+</html>
