@@ -1,6 +1,8 @@
 package com.wc.boot202web.bean;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * class description<br>
@@ -11,6 +13,9 @@ import lombok.Data;
  * @since JDK 1.8+
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class MyUser {
 
   private String usr;

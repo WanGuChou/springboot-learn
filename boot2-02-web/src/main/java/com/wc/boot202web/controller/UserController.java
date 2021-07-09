@@ -1,7 +1,7 @@
 package com.wc.boot202web.controller;
 
 import com.wc.boot202web.bean.MyUser;
-import org.springframework.stereotype.Controller;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
  * @date 2021/7/6 17:00
  * @since JDK 1.8+
  */
-@Controller
+@RestController
 public class UserController {
 
   @GetMapping("/user")
@@ -35,12 +35,14 @@ public class UserController {
     return "delete-张三";
   }
 
-
-
-
-  @PostMapping("/myUser")
+  @PostMapping(value = "/myUser")
   @ResponseBody
-  public MyUser add( MyUser user) {
+  public MyUser add(MyUser user) {
     return user;
+  }
+
+  @GetMapping(value = "/xml")
+  public MyUser xml() {
+    return new MyUser("lisi", "123456");
   }
 }
