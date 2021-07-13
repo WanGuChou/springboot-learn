@@ -1,0 +1,21 @@
+GET http://localhost:8080/user
+Accept: application/json
+Cache-Control: no-cache
+
+<> 2021-07-13T091412.200.json
+
+###
+
+GET http://localhost:8080/user
+Accept: application/xml
+Cache-Control: no-cache
+
+<> 2021-07-13T091408.200.xml
+
+###
+
+GET http://localhost:8080/user
+Accept: application/aabb
+Cache-Control: no-cache
+
+###

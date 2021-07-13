@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class UserController {
 
-  @GetMapping("/user")
+  @GetMapping("/user1")
   public String getUser() {
     return "GET-张三";
   }
@@ -43,6 +43,20 @@ public class UserController {
   public MyUser add( MyUser user) {
     return user;
   }
+
+
+  @GetMapping("/user")
+  @ResponseBody
+  public MyUser user( ) {
+
+    MyUser user=new MyUser();
+    user.setUsr("zhangsan");
+    user.setPwd("123");
+
+    return user;
+  }
+
+
 
 
 
