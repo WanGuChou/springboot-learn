@@ -1,6 +1,7 @@
 package com.wc.boot202web.bean;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.io.Serializable;
@@ -14,8 +15,7 @@ import java.io.Serializable;
  * @since JDK 1.8+
  */
 @Data
-@ToString
-
+@NoArgsConstructor
 public class MyUser implements Serializable {
 
     private String usr;
@@ -25,5 +25,13 @@ public class MyUser implements Serializable {
     public MyUser(String usr, String pwd) {
         this.usr = usr;
         this.pwd = pwd;
+    }
+
+    @Override
+    public String toString() {
+        return "MyUser{" +
+                "usr='" + usr + '\'' +
+                ", pwd='" + pwd + '\'' +
+                '}';
     }
 }

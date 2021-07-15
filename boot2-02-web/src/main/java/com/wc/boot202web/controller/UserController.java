@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class UserController {
 
-  @GetMapping("/user")
+  @GetMapping("/user1")
   public String getUser() {
     return "GET-张三";
   }
