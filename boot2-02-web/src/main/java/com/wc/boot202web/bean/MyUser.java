@@ -1,9 +1,6 @@
 package com.wc.boot202web.bean;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 /**
  * class description<br>
@@ -14,10 +11,11 @@ import lombok.ToString;
  * @since JDK 1.8+
  */
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @ToString
-public class MyUser {
-  private String usr;
-  private String pwd;
+public class MyUser implements Serializable {
+
+    private String usr;
+    private String pwd;
+    private Phone phone;
+
 }
