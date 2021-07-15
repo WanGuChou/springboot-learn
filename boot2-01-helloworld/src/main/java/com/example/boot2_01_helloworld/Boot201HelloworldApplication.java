@@ -15,12 +15,12 @@ public class Boot201HelloworldApplication {
   public static void main(String[] args) {
     ConfigurableApplicationContext context =
         SpringApplication.run(Boot201HelloworldApplication.class, args);
-//    String[] names = context.getBeanDefinitionNames();
-//    for (String name : names) {
-//      System.out.println(name);
-//    }
-//    Person bean = context.getBean(Person.class);
-//    System.out.println(bean);
+    String[] names = context.getBeanDefinitionNames();
+    for (String name : names) {
+      System.out.println(name);
+    }
+    Person bean = context.getBean(Person.class);
+    System.out.println(bean);
 //
 //    Cat cat = context.getBean(Cat.class);
 //    System.out.println(cat);

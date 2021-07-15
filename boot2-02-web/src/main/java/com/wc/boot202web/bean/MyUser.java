@@ -3,6 +3,7 @@ package com.wc.boot202web.bean;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 /**
  * class description<br>
@@ -15,9 +16,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
+@ToString
 public class MyUser {
-
   private String usr;
   private String pwd;
 }

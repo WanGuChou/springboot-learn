@@ -11,3 +11,15 @@ Accept: application/json
 <> 2021-07-09T052634.200.json
 
 ###
+
+
+GET http://127.0.0.1:8080/xml?format=ac
+Accept: application/xml
+
+###
+
+
+GET http://127.0.0.1:8080/xml
+Accept: application/ac
+
+###
