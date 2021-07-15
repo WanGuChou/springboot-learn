@@ -1,6 +1,9 @@
 package com.wc.boot202web.bean;
 
 import lombok.Data;
+import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * class description<br>
@@ -12,10 +15,15 @@ import lombok.Data;
  */
 @Data
 @ToString
+
 public class MyUser implements Serializable {
 
     private String usr;
     private String pwd;
     private Phone phone;
 
+    public MyUser(String usr, String pwd) {
+        this.usr = usr;
+        this.pwd = pwd;
+    }
 }
