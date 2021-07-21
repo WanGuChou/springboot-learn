@@ -25,3 +25,9 @@ Accept: application/ac
 Cache-Control: no-cache
 
 ###
+
+GET http://localhost:8080/xml
+Accept: application/json
+Cache-Control: no-cache
+
+###

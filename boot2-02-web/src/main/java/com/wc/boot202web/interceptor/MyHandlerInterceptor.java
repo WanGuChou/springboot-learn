@@ -17,28 +17,32 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class MyHandlerInterceptor implements HandlerInterceptor {
 
-  @Override
-  public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
-      throws Exception {
-    if (request.getParameterMap().containsKey("token")) {
-      return true;
+    @Override
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+            throws Exception {
+        if (request.getParameterMap().containsKey("token")) {
+            return true;
+        }
+        response.setStatus(HttpStatus.UNAUTHORIZED.value());
+        response.getWriter().println(HttpStatus.UNAUTHORIZED.getReasonPhrase());
+        response.getWriter().flush();
+        return false;
     }
-    response.setStatus(HttpStatus.UNAUTHORIZED.value());
-    response.getWriter().println(HttpStatus.UNAUTHORIZED.getReasonPhrase());
-    response.getWriter().flush();
-    return false;
-  }
 
-  @Override
-  public void afterCompletion(
-      HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
-      throws Exception {}
+    @Override
+    public void afterCompletion(
+            HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
+            throws Exception {
+        System.out.println(123);
+    }
 
-  @Override
-  public void postHandle(
-      HttpServletRequest request,
-      HttpServletResponse response,
-      Object handler,
-      ModelAndView modelAndView)
-      throws Exception {}
+    @Override
+    public void postHandle(
+            HttpServletRequest request,
+            HttpServletResponse response,
+            Object handler,
+            ModelAndView modelAndView)
+            throws Exception {
+        System.out.println(1234);
+    }
 }

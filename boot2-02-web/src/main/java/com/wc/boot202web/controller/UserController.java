@@ -62,6 +62,7 @@ public class UserController {
 
 
   @GetMapping(value = "/xml")
+  @ResponseBody
   public MyUser xml() {
     return new MyUser("lisi", "123456");
   }
