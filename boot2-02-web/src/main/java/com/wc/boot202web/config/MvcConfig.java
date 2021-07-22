@@ -57,7 +57,8 @@ public class MvcConfig {
         registry
             .addInterceptor(new MyHandlerInterceptor())
             .addPathPatterns("/**")
-            .excludePathPatterns("/user*");
+//            .excludePathPatterns("/user*")
+            .excludePathPatterns("/fil*");
       }
 
       @Override
