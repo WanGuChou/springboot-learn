@@ -1,0 +1,8 @@
+
+
+info:
+  appName: boot-actuator
+  version: 0.0.1
+  mavenProjectName: @project.artifactId@
+server:
+  port: 8080

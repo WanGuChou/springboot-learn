@@ -1,0 +1,18 @@
+# sql执行
+POST http://localhost:8080/dc/exe
+
+select  CURRENT_TIMESTAMP from  dual
+
+
+###
+GET http://localhost:8080/dc/now
+
+
+
+
+###
+GET http://localhost:8080/dc/list
+
+
+###
+GET https://emdctest.healthlink.cn/emdc-bigscreen/nanning/list/229fb13d-7928-4a4b-a977-1ca7f9c8fc26%2C0d71945d-47df-468b-8e93-a338fceb5243
